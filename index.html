@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty - Proyecto integrador</title>
+
+     <!-- /* Enlazando el archivo CSS */ -->
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    
+    <!-- /* Creacion del Header */ -->
+    <header class="Header" role = "banner">
+        <div class="container header">
+            <h1 id = "main_title"> Rick and Morty</h1>
+            <p class="subtitle"> Personajes de Rick and Morty</p>
+        </div>
+        <div class="controls">
+            <!-- /* Switch para modo oscuro */ -->
+            <label class="switch_theme" for="themeToggle" title="Cambiar entre modo oscuro y claro">
+                <span class="sun_icon">☀️</span>
+                <input type="checkbox" id="themeToggle" aria-label="Cambiar tema" />
+                <span class="switch_label"></span>
+                <span class="moon_icon">🌙</span>
+            </label>
+        </div>
+    </header>
+
+    <!-- /* Contenido principal de la pagina */ -->
+    <main class="container" role="main">
+
+        <section class="controls" aria-labelledby="Busqueda de personaje">
+           <h2 id="search_section" class="section_title"> Busca un personaje</h2> 
+
+            <!-- /* Creacion del campo de busqueda */ -->
+
+           <form id="searchForm" aria-label="Busqueda de personajes">
+            <input
+                id="searchInput"
+                type="search"
+                placeholder="Escribe aqui su nombre"
+                aria-label="Campo de busqueda"
+                />
+                <button id ="searchBtn" type="submit" class="btn_primary"> Buscar </button>
+                <button id="loadBtn" type="button" class="btn_secondary"> Cargar primeros </button>
+           </form>
+
+           <!-- /* Indicador de carga */ -->
+           <div id="status" aria-live="polite" aria-atomic="true" class="status"> Listo </div>
+        </section>
+       
+        <!-- /* Seccion para mostrar los personajes */ -->
+        <section id="results" class="grid" aria-label="Resultado de personajes"></section>
+
+        <!-- /* Seccion de paginacion */ -->
+        <nav class="pagination" aria-label="Controles de paginacion">
+          <button id="prevBtn" type="button" class="btn_pagination" disabled>
+             Anterior 
+            </button>  
+           <span id="pageInfo" aria-live="polite" aria-atomic="true"> Pagina 1</span>
+           <button id="nextBtn" type="button" class="btn_pagination" disabled>
+                Siguiente
+           </button> 
+        </nav>
+    </main>
+
+    <!-- /* Footeer o pie de pagina */ -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer_content">
+                <p class="fppter_info">
+                    Proyecto Integrador - Modulo 1 Javascript - Juan Pablo Morales R.
+                </p>
+                <p class="credits">
+                    API <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener noreferrer">Rick and Morty</a>
+                </p>
+                <p class="author">
+                     © Juan Pablo Morales R.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- /* Enlace con el archivo JavaScript */ -->
+    <script src="index.js"></script>
+</body>
+</html>
